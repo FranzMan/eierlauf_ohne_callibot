@@ -1,3 +1,18 @@
+function dadadadum () {
+    music.playTone(392, music.beat(BeatFraction.Half))
+    basic.pause(10)
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    basic.pause(10)
+    music.playTone(311, music.beat(BeatFraction.Double))
+    basic.pause(10)
+    music.playTone(349, music.beat(BeatFraction.Half))
+    basic.pause(10)
+    music.playTone(349, music.beat(BeatFraction.Half))
+    music.playTone(349, music.beat(BeatFraction.Half))
+    basic.pause(10)
+    music.playTone(294, music.beat(BeatFraction.Double))
+}
 /**
  * egal welcher weitere block mit variable level eingesetzt wird - es wird ein Fehler geworfen, aber nur fürs herunterladen
  * 
@@ -8,6 +23,7 @@
 let LED_Y = 0
 let LED_X = 0
 let level = 1
+basic.showNumber(level)
 while (!(input.buttonIsPressed(Button.A))) {
     if (input.buttonIsPressed(Button.B)) {
         if (level < 9) {
@@ -40,7 +56,7 @@ basic.forever(function () {
     if (LED_X < 0 || LED_X > 5 || (LED_Y > 5 || LED_Y < 0)) {
         basic.setLedColor(0xff0000)
         basic.showIcon(IconNames.No)
-        music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once)
+        dadadadum()
         basic.pause(2000)
         basic.turnRgbLedOff()
     }
